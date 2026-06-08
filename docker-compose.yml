@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  db:
+    image: mysql:8.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: dental_cloud
+      MYSQL_ROOT_PASSWORD: 
+    ports: ["3306:3306"]
+
+  backend:
+    build: ./backend
+    ports: ["3000:3000"]
+    depends_on: ["db"]
+    environment:
+      DB_HOST: db
+
+  frontend:
+    build: ./frontend
+    ports: ["80:80"]
+    depends_on: ["backend"]
