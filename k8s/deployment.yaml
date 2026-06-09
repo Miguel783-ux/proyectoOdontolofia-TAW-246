@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: backend
-        image: miguel angel mendoza espinoza/dental-backend:latest
+        image: miguelangelmendozaespinoza/dental-backend:latest
         ports:
         - containerPort: 3000
