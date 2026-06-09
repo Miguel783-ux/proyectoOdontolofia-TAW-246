@@ -12,3 +12,13 @@ Sistema de gestión odontológica integral desarrollado para la asignatura INF24
 Para levantar todo el entorno (Backend, Frontend y Base de Datos) de forma automática:
 ```bash
 docker-compose up --build
+
+## Instalación y Ejecución sin el Docker
+#frontend
+cd Interfaz
+npm install
+npm run dev
+#backend
+cd backend
+npm install
+npm run start:dev
