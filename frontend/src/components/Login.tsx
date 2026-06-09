@@ -1,8 +1,6 @@
 import React, { useState, useEffect, type FormEvent } from 'react';
 import { loginService } from '../services/auth.service';
 
-// Definimos los tipos de las propiedades que recibe el componente
-// Busca esta interfaz en la parte superior de Login.tsx y cámbiala por esta:
 interface LoginProps {
   onLoginSuccess: (usuario: { matricula: string; nombre: string; rol: string }) => void;
 }
