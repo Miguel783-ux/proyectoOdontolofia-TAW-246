@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common'; // 🛡️ CORREGIDO: Se añade NotFoundException para solucionar el error 2304
+import { Injectable, NotFoundException } from '@nestjs/common'; 
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { Paciente } from './paciente.entity';
@@ -36,7 +36,7 @@ export class PacientesService {
     return this.pacientesRepository.save(nuevoPaciente);
   }
 
-  // 🛠️ ACTUALIZAR COMPLETAMENTE CORREGIDO (Resuelve errores 2551 y 2339)
+  // 🛠️ ACTUALIZAR COMPLETAMENTE 
   async actualizar(id: number, datos: { nombre?: string; tratamiento?: string; fechaCita?: string; estado?: string }) {
     // 1. Buscamos usando 'pacientesRepository' (en plural) para solucionar el error de compilación
     const paciente = await this.pacientesRepository.findOne({ where: { id } });
